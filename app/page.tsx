@@ -1,20 +1,19 @@
 "use client"; 
 
 export default function Home() {
-  const publicKey = process.env.NEXT_PUBLIC_API_KEY;
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-500 to-green-500 text-white">
       {/* Payment Form */}
       <form method="POST" action="https://api.chapa.co/v1/hosted/pay">
-        <input type="hidden" name="public_key" value= {publicKey} />
-        <input type="hidden" name="tx_ref" value="lodestone-tx-12345678sss9" />
-        <input type="hidden" name="amount" value="10" />
+        <input type="hidden" name="public_key" value= "Your Public API Key" />
+        <input type="hidden" name="tx_ref" value="lodestone-tx-12345678s7s9" />
+        <input type="hidden" name="amount" value="10000" />
         <input type="hidden" name="currency" value="ETB" />
         <input type="hidden" name="email" value="santafantaye@gmail.com" />
         <input type="hidden" name="first_name" value="Sintayehu" />
         <input type="hidden" name="last_name" value="Fantaye" />
         <input type="hidden" name="title" value="Let us do this" />
-        <input type="hidden" name="description" value="Paying with Confidence with cha" />
+        <input type="hidden" name="description" value="Paying with Confidence with chapa" />
         <input type="hidden" name="logo" value="https://chapa.link/asset/images/chapa_swirl.svg" />
         <input type="hidden" name="callback_url" value="https://example.com/callbackurl" />
         <input type="hidden" name="return_url" value="https://lodestone.et" />
